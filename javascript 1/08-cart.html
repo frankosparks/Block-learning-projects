@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <h2>Cart Quantity</h2>
+    <button onclick="
+      updateCartQuantity('Show Quantity');
+    ">Show Quantity</button>
+
+    <button onclick="
+      updateCartQuantity('Add to Cart');
+    ">Add to Cart</button>
+
+    <button onclick="
+     updateCartQuantity('+2');
+    ">+2</button>
+
+    <button onclick="
+      updateCartQuantity('+3');
+    ">+3</button>
+
+    <button onclick="
+      updateCartQuantity('+4');
+    ">+4</button>
+
+    <button onclick="
+    updateCartQuantity('+5');
+    ">+5</button>
+
+    <button onclick="
+      updateCartQuantity('-1');
+    ">-1</button>
+
+    <button onclick="
+      updateCartQuantity('-2');
+    ">-2</button>
+
+    <button onclick="
+     updateCartQuantity('-3');
+    ">-3</button>
+
+    <button onclick="
+    updateCartQuantity('Reset Cart');
+    ">Reset Cart</button>
+
+    <p class="js-quantity">Cart quantity: 0</p>
+
+    <script>
+
+      let cartQuantity = 0;
+      function updateCartQuantity(calculation){
+       
+        if(calculation === 'Show Quantity'){
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        else if(calculation === 'Add to Cart'){
+          cartQuantity ++;
+          //displaying the new cartQuantity
+          console.log(`Cart quantity: ${cartQuantity}`);
+          if(cartQuantity > 10){
+            alert('Cart is full!')
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity - 1}`);
+            return;
+          }
+          
+            console.log(`It is as usual.`);
+          
+        }
+        else if(calculation === '+2'){
+          cartQuantity = cartQuantity + 2;
+          console.log(`cart Quantity: ${cartQuantity}`);
+          if(cartQuantity > 10){
+            alert('Cart is full!')
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity - 2}`);
+            return;
+          }
+          console.log(`It is as usual.`);
+          
+        }
+        else if(calculation === '+3'){
+          cartQuantity += 3;
+          console.log(`cart Quantity: ${cartQuantity}`);
+          if(cartQuantity > 10){
+            alert('Cart is full!');
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity - 3}`);
+            return;
+          }
+          
+            console.log(`It is as usual.`);
+          
+        }
+        else if(calculation === '+4'){
+          cartQuantity += 4;
+          console.log(`Cart Quantity:${cartQuantity}`);
+          if(cartQuantity > 10){
+            alert('Cart is full!');
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity - 4}`);
+            return;
+          }
+          
+            console.log(`It is as usual.`);
+           
+        }
+        else if(calculation === '+5'){
+          cartQuantity += 5;
+          console.log(`Cart Quantity:${cartQuantity}`);
+          if(cartQuantity > 10){
+              alert('Cart is full!');
+              console.log(`Cart quantity: ${cartQuantity = cartQuantity - 5}`);
+              return;
+            }
+            
+              console.log(`It is as usual.`);
+            
+        }
+        else if(calculation === '-1'){
+          cartQuantity--;
+          console.log(`Cart Quantity:${cartQuantity}`);
+          if(cartQuantity < 0){
+            alert('Not enough items!');
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity + 1}`);
+            return;
+          }
+          
+            console.log('It is as usual.');
+          
+        }
+        else if(calculation === '-2'){
+          cartQuantity = cartQuantity - 2;
+          console.log(`Cart Quantity:${cartQuantity}`);
+          if(cartQuantity < 0){
+            alert('Not enough items!');
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity + 2}`);
+            return;
+          }
+          
+            console.log('It is as usual.');
+          
+        }
+        else if(calculation === '-3'){
+          cartQuantity -= 3;
+          console.log(`Cart Quantity:${cartQuantity}`);
+          if(cartQuantity < 0){
+            alert('Not enough items!');
+            console.log(`Cart quantity: ${cartQuantity = cartQuantity + 3}`);
+            return;
+          }
+         
+            console.log('It is as usual.');
+          
+        }
+        else if(calculation === 'Reset Cart'){
+            cartQuantity = 0;
+            console.log(`Cart Quantity: 0`);
+        }
+        display();
+      }
+
+      function display(){
+        document.querySelector('.js-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
+    }
+    </script>
+  </body>
+</html>

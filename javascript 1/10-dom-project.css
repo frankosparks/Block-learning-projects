@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial;
+}
+.js-subscribe-button{
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom:30px ;
+}
+.is-subscribed{
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+/*.js-subscribe-button:hover{
+  background-color: white;
+  color: black;
+}*/
+
+.calc{
+  background-color: green;
+  color: aliceblue;
+  border: none;
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.js-cost-input{
+  height: 2.5rem;
+  font-size: 15px;
+}
